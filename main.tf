@@ -22,6 +22,6 @@ resource "aws_subnet" "main" {
 }
 resource "aws_ami_from_instance" "example" {
   name               = "terraform-example"
-  source_instance_id = "ami-0ebc8f6f580a04647"
+  source_instance_id = "i-ami-0ebc8f6f580a04647"
 }
 
