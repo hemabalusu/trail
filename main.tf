@@ -21,9 +21,12 @@ resource "aws_subnet" "main" {
 }
 
 resource "aws_instance" "example" {
-  ami           = "ami-01aab85a5e4a5a0fe"
+  ami           = "ami-0e999cbd62129e3b1"
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.main.id
+  tags = {
+    Name = "Mainsuinsta"
+  }
 }
 
 
