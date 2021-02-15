@@ -1,3 +1,9 @@
+
+provider "aws" {
+  region = "us-east-2"
+  access_key = "AKIA2TYAN3PJR6DYXJWQ"
+  secret_key = "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"
+}
 data "aws_ami" "ubuntu" {
   most_recent = true
 
