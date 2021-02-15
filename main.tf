@@ -6,13 +6,16 @@ provider "aws" {
 }
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
+  tags = {
+    Name = "vpc"
+  }
 }
 resource "aws_subnet" "main" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.0.0/24"
 
   tags = {
-    Name = "Main"
+    Name = "Mainsu"
   }
 }
 data "aws_ami" "ubuntu" {
@@ -28,7 +31,7 @@ data "aws_ami" "ubuntu" {
     values = ["hvm"]
   }
 
-  owners = ["099720109477"] # Canonical
+  owners = ["0729608477651"] # Canonical
 }
 
 resource "aws_instance" "web" {
