@@ -1,4 +1,4 @@
-terraform {
+
 provider "aws" {
   region = "us-east-2"
   access_key = "AKIA2TYAN3PJR6DYXJWQ"
@@ -18,9 +18,5 @@ resource "aws_subnet" "main" {
     Name = "Mainsu"
   }
 }
-resource "aws_instance" "example" {
-  ami           = "ami-01aab85a5e4a5a0fe"
-  instance_type = "t2.micro"
-}
-}
+
 
